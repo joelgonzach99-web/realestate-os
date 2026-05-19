@@ -3,8 +3,6 @@ import Sidebar from './components/Sidebar'
 import Dashboard from './pages/Dashboard'
 import Leads from './pages/Leads'
 import Pipeline from './pages/Pipeline'
-import NuevoLead from './pages/NuevoLead'
-import Filtros from './pages/Filtros'
 import Propiedades from './pages/Propiedades'
 import Agenda from './pages/Agenda'
 import AgenteIA from './pages/AgenteIA'
@@ -13,16 +11,13 @@ const PAGES = {
   dashboard: Dashboard,
   leads: Leads,
   pipeline: Pipeline,
-  nuevo_lead: NuevoLead,
-  filtros: Filtros,
   propiedades: Propiedades,
   agenda: Agenda,
   agente_ia: AgenteIA,
 }
 
-function App() {
+export default function App() {
   const [page, setPage] = useState('dashboard')
-
   const CurrentPage = PAGES[page] || Dashboard
 
   return (
@@ -34,5 +29,3 @@ function App() {
     </div>
   )
 }
-
-export default App
